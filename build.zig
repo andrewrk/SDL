@@ -57,7 +57,7 @@ pub fn build(b: *std.Build) void {
             mod.linkFramework("Foundation", .{});
         },
         .emscripten => {
-            mod.addCMacro("__EMSCRIPTEN_PTHREADS__ ", "1");
+            mod.addCMacro("__EMSCRIPTEN_PTHREADS__", "1");
             mod.addCMacro("USE_SDL", "2");
             mod.addCSourceFiles(.{ .files = &emscripten_src_files });
 
